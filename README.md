@@ -40,7 +40,7 @@ Run PO directly from your terminal:
 ```bash
 po --api-key YOUR_API_KEY
 ```
-
+* You can generate your key from [https://aistudio.google.com/api-keys](https://aistudio.google.com/api-keys) .
 Example:
 
 ```bash
