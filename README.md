@@ -41,7 +41,7 @@ Run PO directly from your terminal:
 po --api-key YOUR_API_KEY
 ```
 * You can generate your key from [https://aistudio.google.com/api-keys](https://aistudio.google.com/api-keys) .
-Example:
+* Example:
 
 ```bash
 po --api-key AIzaSyC9CCCKDKpcAg98zsrBBEPEDwEMVNralX0
