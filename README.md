@@ -1,4 +1,8 @@
 # PO — AI Command-Line Agent ⚡
+[![PyPI version](https://img.shields.io/pypi/v/pobyaryan.svg)](https://pypi.org/project/pobyaryan/)
+[![Python](https://img.shields.io/pypi/pyversions/pobyaryan.svg)](https://pypi.org/project/pobyaryan/)
+[![License](https://img.shields.io/pypi/l/pobyaryan.svg)](LICENSE)
+[![Downloads](https://img.shields.io/pypi/dm/pobyaryan.svg)](https://pypi.org/project/pobyaryan/)
 
 **PO** is a lightweight yet powerful AI-powered command-line agent that transforms your terminal into an intelligent assistant. Built with a professional, tool-based agent architecture, PO understands natural language commands and converts them into real file system and development actions — directly from the CLI.
 
