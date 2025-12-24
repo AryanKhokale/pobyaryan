@@ -47,10 +47,10 @@ Once activated, PO is ready to interact with you as **USER** in the terminal.
 
 ---
 
-## 🧑‍💻 Example Interaction
+## 🧑‍💻 Example Interaction for common development with your convinient tech-stack
 
 ```text
-USER : create me a frontend for a wedding website
+USER : create me an attractive, interactive, dynamic and responvise frontend for a wedding website using html css and js
 
 PO   : Sure! I’ll create a clean and elegant wedding website frontend for you.
 
@@ -73,6 +73,34 @@ PO   : Sure! I’ll create a clean and elegant wedding website frontend for you.
 ```
 
 > ✨ **Tip:** Use detailed prompts for more accurate and customized outputs.
+
+
+## 🧑‍💻 Example Interaction for summary of a project/folder/file 
+
+```text
+USER : give me a summary about MY_FIRST_API
+
+PO   : This project is a FastAPI backend application designed to provide an API for querying and filtering job-related data. It loads and preprocesses an `ai_job_dataset.csv` file at startup, making various data points like company names, industries, job titles, salaries, experience years, and benefits scores available.
+
+The API exposes GET endpoints to retrieve lists of these categories and ratios (e.g., Salary vs. Benefits Score). Additionally, POST endpoints allow filtering job data based on criteria such as experience level, education, employment type, and company size, utilizing Pydantic models for input validation. The application also incorporates CORS and GZip middlewares for cross-origin resource sharing and response compression, respectively.
+```
+> ✨ **Tip:** Just use the project/folder/file name instead of full path, PO will find it!  
+               For the Desrciption you can even specify do u want a deep description or
+               just a short summary.
+
+               
+## 🧑‍💻 Example Interaction for file system operations 
+
+```text
+USER : just find me the aryan.jpg and move it to Desktop
+
+PO   : Sure ! 
+       I found aryan.jpg at C:\Users\ARYAN\Downloads\aryan.jpg and i have moved it to 
+      C:\Users\ARYAN\OneDrive\Desktop\aryan.jpg.
+      Would you like me to make a seperate folder named ARYAN_MEMORIES for your personal
+      shots and store all your personal shots in it?
+```
+> ✨ **Tip:** Just use the project/folder/file name instead of full path, PO will find it!    
 
 ---
 
@@ -113,8 +141,8 @@ PO   : Over and out! 👋
 2. Clone the repository:
 
    ```bash
-   git clone https://github.com/AryanKhokale/po_by_aryank
-   cd po_by_aryank
+   git clone https://github.com/AryanKhokale/pobyaryan
+   cd pobyaryan
    ```
 
 3. Install dependencies:
