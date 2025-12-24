@@ -80,15 +80,17 @@ PO   : Sure! I’ll create a clean and elegant wedding website frontend for you.
 ```text
 USER : give me a summary about MY_FIRST_API
 
-PO   : This project is a FastAPI backend application designed to provide an API for querying and filtering job-related data. It loads and preprocesses an `ai_job_dataset.csv` file at startup, making various data points like company names, industries, job titles, salaries, experience years, and benefits scores available.
+PO   : This project is a FastAPI backend application designed to provide an API for csv`  
+       querying   and filtering job-related data. It loads and preprocesses an `ai_job_dataset.csv' file at startup, making various data points like company names, industries, job_titles, salaries, experience           years, and benefits scores available.
 
-The API exposes GET endpoints to retrieve lists of these categories and ratios (e.g., Salary vs. Benefits Score). Additionally, POST endpoints allow filtering job data based on criteria such as experience level, education, employment type, and company size, utilizing Pydantic models for input validation. The application also incorporates CORS and GZip middlewares for cross-origin resource sharing and response compression, respectively.
+       The API exposes GET endpoints to retrieve lists of these categories and ratios (e.g., Salary vs. Benefits Score). Additionally, POST endpoints allow filtering job data based on criteria such as                   experience level, education, employment type, and company size, utilizing Pydantic models for input validation. The application also incorporates CORS and GZip middlewares for cross-origin resource
+       sharing and response compression, respectively.    
 ```
 > ✨ **Tip:** Just use the project/folder/file name instead of full path, PO will find it!  
                For the Desrciption you can even specify do u want a deep description or
                just a short summary.
 
-               
+
 ## 🧑‍💻 Example Interaction for file system operations 
 
 ```text
@@ -100,7 +102,7 @@ PO   : Sure !
       Would you like me to make a seperate folder named ARYAN_MEMORIES for your personal
       shots and store all your personal shots in it?
 ```
-> ✨ **Tip:** Just use the project/folder/file name instead of full path, PO will find it!    
+> ✨ **Tip:** Just use the project/folder/file name instead of full path, PO will find it and do the operations for your premeditated output!    
 
 ---
 
