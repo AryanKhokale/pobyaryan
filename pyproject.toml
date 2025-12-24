@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pobyaryan"                        # Your pip package name
+version = "0.1.1"                          # Update on new releases
+description = "PO — an AI command-line agent by ARYAN"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "ARYAN KHOKALE" }
+]
+requires-python = ">=3.9"
+
+# Your package depends on google-genai
+dependencies = [
+    "google-genai~=1.0",
+]
+
+keywords = ["AI", "agent", "cli", "automation", "genai"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+# This creates your console command "po"
+[project.scripts]
+po = "pobyaryan.cli:main"
+
+# Tells setuptools where your source code lives
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/AryanKhokale/pobyaryan"
+Repository = "https://github.com/AryanKhokale/pobyaryan"
+Documentation = "https://github.com/AryanKhokale/pobyaryan#readme"
+Issues = "https://github.com/AryanKhokale/pobyaryank/issues"
+Changelog = "https://github.com/AryanKhokale/pobyaryan/releases"
+
