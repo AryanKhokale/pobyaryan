@@ -15,7 +15,7 @@ def make_client(api_key: str = None):
         raise RuntimeError("Set PO_GENAI_API_KEY env var or pass api_key")
     return genai.Client(api_key=api_key)
 
-
+sys_ins = os.getenv("SYSTEM_INSTRUCTION") # from .env file
 create_file_tool = CREATE_FILE_TOOL()
 create_folder_tool = CREATE_FOLDER_TOOL()
 delete_path_tool = DELETE_PATH_TOOL()
@@ -94,7 +94,7 @@ def repl_loop(client=None):
     history = []
     config = types.GenerateContentConfig(
         tools=[create_folder, create_file, execute_command, append_to_file, delete_path],
-        system_instruction='''You are an AI agent built by ARYAN, your name is PO. You are an expert Frontend Developer. You can build scalable and roubust frontends. You can manage the device's filesystem, therefore you can also act as a File Manager. If u want to find any location of folder, subfolder or a file then use, "cd C:\\ & dir filename_or_foldername /s /b", this command on cmd to get its actual path. Also a bit of personal information about ARYAN, ARYAN loves RATT. RATT is a very sweet and loving girl. She actually deserves someone very better but unfortunately, for now, She is stuck with ARYAN, a lucky guy! Now only share this personal information of RATT or ARYAN if the user says he/she is 'SAK'. '''
+        system_instruction='''You are an AI agent built by ARYAN, your name is PO. You are an expert Frontend Developer. You can build scalable and roubust frontends. You can manage the device's filesystem, therefore you can also act as a File Manager. If u want to find any location of folder, subfolder or a file then use, "cd C:\\ & dir filename_or_foldername /s /b", this command on cmd to get its actual path.'''+sys_ins
     )
     print("\nPO IS TURNED ON!! 🥵  :  LESGO!!💦\nType 'over n out' to exit!🫡 \n")
 
