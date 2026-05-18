@@ -59,7 +59,7 @@ Once activated, PO is ready to interact with you as **USER** in the terminal.
 > ✨ **Tip:** Use detailed prompts for more accurate and customized outputs.
 
 ---
-## 🧑‍💻 Demo video  of PO --> 
+## 🧑‍💻 Demo video  of PO --> https://www.linkedin.com/feed/update/urn:li:activity:7462046466556178432
 ---
 ### Snapshots of interaction with PO( in the Demo Video )
 ---
