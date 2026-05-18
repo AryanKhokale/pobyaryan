@@ -56,6 +56,32 @@ Once activated, PO is ready to interact with you as **USER** in the terminal.
 
 ---
 
+> ✨ **Tip:** Use detailed prompts for more accurate and customized outputs.
+
+---
+## 🧑‍💻 Demo video  of PO --> 
+---
+### Snapshots of interaction with PO( in the Demo Video )
+---
+
+## 🧑‍💻 Frontend Development Agent 
+<img width="1533" height="682" alt="image" src="https://github.com/user-attachments/assets/3d1a1d7f-9657-4112-a0de-37d4b9ad949f" />
+<img width="1493" height="696" alt="image" src="https://github.com/user-attachments/assets/60b31faa-10b1-469a-9203-e3197dd8d16c" />
+<img width="1562" height="738" alt="image" src="https://github.com/user-attachments/assets/0d7000c7-beee-4c6c-a6c7-9dd98b77b264" />
+<img width="1487" height="701" alt="image" src="https://github.com/user-attachments/assets/dcdae965-98af-41fc-9b43-40712832c6e5" />
+
+---
+
+## 🧑‍💻 File and System Manager Agent
+<img width="1873" height="692" alt="image" src="https://github.com/user-attachments/assets/f2996373-3cec-4003-a271-a08ee5f4dd70" />
+<img width="1356" height="692" alt="image" src="https://github.com/user-attachments/assets/7a68db18-e243-4429-99f1-d022bc9d3527" />
+<img width="1277" height="672" alt="image" src="https://github.com/user-attachments/assets/4af5372f-ede4-4ab5-9901-26bbf5636753" />
+
+
+
+---
+### Guide for Prompts!
+---
 ## 🧑‍💻 Example Interaction for common development with your convinient tech-stack
 
 ```text
@@ -83,30 +109,6 @@ PO   : Sure! I’ll create a clean and elegant wedding website frontend for you.
 
 > ✨ **Tip:** Use detailed prompts for more accurate and customized outputs.
 
----
-## 🧑‍💻 Demo video  of PO --> 
----
-### Snapshots of interaction with PO( in the Demo Video )
----
-
-## 🧑‍💻 Frontend Development Agent 
-<img width="1533" height="682" alt="image" src="https://github.com/user-attachments/assets/3d1a1d7f-9657-4112-a0de-37d4b9ad949f" />
-<img width="1493" height="696" alt="image" src="https://github.com/user-attachments/assets/60b31faa-10b1-469a-9203-e3197dd8d16c" />
-<img width="1562" height="738" alt="image" src="https://github.com/user-attachments/assets/0d7000c7-beee-4c6c-a6c7-9dd98b77b264" />
-<img width="1487" height="701" alt="image" src="https://github.com/user-attachments/assets/dcdae965-98af-41fc-9b43-40712832c6e5" />
-
----
-
-## 🧑‍💻 File and System Manager Agent
-<img width="1873" height="692" alt="image" src="https://github.com/user-attachments/assets/f2996373-3cec-4003-a271-a08ee5f4dd70" />
-<img width="1356" height="692" alt="image" src="https://github.com/user-attachments/assets/7a68db18-e243-4429-99f1-d022bc9d3527" />
-<img width="1277" height="672" alt="image" src="https://github.com/user-attachments/assets/4af5372f-ede4-4ab5-9901-26bbf5636753" />
-
-
-
----
-### Guide for Prompts!
----
 ## 🧑‍💻 Example Interaction for summary of a project/folder/file 
 ```text
 USER : give me a summary about MY_FIRST_API
