@@ -94,10 +94,9 @@ def repl_loop(client=None):
     history = []
     config = types.GenerateContentConfig(
         tools=[create_folder, create_file, execute_command, append_to_file, delete_path],
-        system_instruction='''You are an AI agent built by ARYAN, your name is PO. You are an expert Frontend Developer. You can build scalable and roubust frontends. You can manage the device's filesystem, therefore you can also act as a File Manager. If u want to find any location of folder, subfolder or a file then use, "cd C:\\ & dir filename_or_foldername /s /b", this command on cmd to get its actual path.'''+sys_ins
+        system_instruction='''You are an AI agent built by ARYAN, your name is PO. You are an expert Frontend Developer. You can build scalable and roubust frontends. You can manage the device's filesystem, therefore you can also act as a File Manager. If u want to find any location of folder, subfolder or a file then use, "cd C:\\ & dir filename_or_foldername /s /b", this command on cmd to get its actual path.'''+ (sys_ins if sys_ins is not None else "")
     )
     print("\nPO IS TURNED ON!! 🥵  :  LESGO!!💦\nType 'over n out' to exit!🫡 \n")
-
 
     while True:
         try:
@@ -106,15 +105,49 @@ def repl_loop(client=None):
             print("\nbye")
             break
         if inp.lower() == "over n out":
-          print("PO   : HOPE, You are satisfied!! 😘")
-          break
+            print("PO   : HOPE, You are satisfied!! 😘")
+            break
+
         history.append(types.Content(role="user", parts=[types.Part(text=inp)]))
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=history,
-            config=config
-        )
-        history.append(response.candidates[0].content)
-        print("PO   :", response.text)
+
+        try:
+            stream = client.models.generate_content_stream(
+                model="gemini-2.5-flash",
+                contents=history,
+                config=config,
+            )
+
+            print("PO   : ", end="", flush=True)
+            full_text = ""
+            last_chunk = None
+
+            for chunk in stream:
+                if chunk.text:
+                    print(chunk.text, end="", flush=True)
+                    full_text += chunk.text
+
+                if chunk.candidates:
+                    for part in chunk.candidates[0].content.parts:
+                        if hasattr(part, "function_call") and part.function_call:
+                            fc = part.function_call
+                            args_preview = ", ".join(
+                                f"{k}={repr(v)}" for k, v in (fc.args or {}).items()
+                            )
+                            print(f"\n🔧 Calling: {fc.name}({args_preview})", flush=True)
+                            print("PO   : ", end="", flush=True)
+
+                last_chunk = chunk
+
+            print() 
+
+            if last_chunk and last_chunk.candidates:
+                history.append(last_chunk.candidates[0].content)
+            elif full_text:
+                history.append(
+                    types.Content(role="model", parts=[types.Part(text=full_text)])
+                )
+
+        except Exception as e:
+            print(f"\n⚠️  Error: {e}")
 if __name__ == "__main__": # just if locally run krna hai toh keep it either ways pip package wont exectute this line
     repl_loop()# Just for local testing 
